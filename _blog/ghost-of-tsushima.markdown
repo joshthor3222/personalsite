@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ghost of Tsushima"
-date:   01/10/2021
+date:   10/01/2021
 categories: videogames
 permalink: /blog/ghost-of-tsushima/
 imgpath: ghosthead.jpg
