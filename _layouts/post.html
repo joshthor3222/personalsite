@@ -15,6 +15,9 @@ layout: default
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
+    {%- if page.score != "" -%}
+      <h1>{{ page.score }}</h1>
+    {%- endif -%}
   </div>
 
   {%- if site.disqus.shortname -%}

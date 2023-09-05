@@ -11,9 +11,9 @@ layout: default
 
 
   {% if site.paginate %}
-    {% assign posts = paginator.blog %}
+    {% assign posts = paginator.blog | sort: 'date' | reverse %}
   {% else %}
-    {% assign posts = site.blog %}
+    {% assign posts = site.blog | sort: 'date' | reverse %}
   {% endif %}
 
 
@@ -24,20 +24,45 @@ layout: default
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-      <li>
-        <a href="{{ post.url | relative_url }}">
-          <img src="/assets/img/{{post.imgpath}}" />
-        </a>
-        <div class="data">
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-        </div>
-        {%- if site.show_excerpt -%}
-          {{ post.excerpt }}
+      <li class="{{ post.scale }}">
+        {%- if post.score -%}
+          <span class="post-score">
+            {{ post.score }}
+          </span>
+        {%- endif %}
+        {%- if post.scale == "small" -%}
+            <img src="/assets/img/{{post.imgpath}}" />
+          <div class="data">
+            <h3>
+                {{ post.title | escape }}
+            </h3>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            {%- if post.imdb -%}
+              <a class="imdb" href="https://www.imdb.com/title/{{post.imdb}}/"><span class="icon"></span></a>
+            {%- endif -%}
+          </div>
+          <div class="post-body">
+            {%- if site.show_excerpt -%}
+              {{ post.content }}
+            {%- endif -%}
+          </div>
+        {%- else -%}
+          <a href="{{ post.url | relative_url }}">
+            <img src="/assets/img/{{post.imgpath}}" />
+          </a>
+          <div class="data">
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+          </div>
+          <div class="post-body">
+            {%- if site.show_excerpt -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </div>
         {%- endif -%}
       </li>
       {%- endfor -%}

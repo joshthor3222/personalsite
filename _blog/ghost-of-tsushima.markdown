@@ -5,6 +5,7 @@ date:   10/01/2021
 categories: videogames
 permalink: /blog/ghost-of-tsushima/
 imgpath: ghosthead.jpg
+score: 9.5
 excerpt: "Ghost of Tsushima is perhaps the most beautiful game on the PS4, and certainly the best looking console exclusive. It also happens to be the best Assassins Creed game of all time."
 ---
 
@@ -36,6 +37,4 @@ When I started I assumed there are different endings based on your playstyle. I 
 
 Additionally, as a colorblind person, some of the crafting materials and collectibles are exceptionally hard to find, and the game could desperately use some accessibility options to resolve this. 
 
-Overall however, I absolutely loved it. 
-
-<h1>9.5/10</h1>
+Overall however, I absolutely loved it.
