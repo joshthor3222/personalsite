@@ -13,6 +13,8 @@ body .post-feature img {
   object-fit: cover;
 }
 
+
+
 .post-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -26,6 +28,21 @@ body .post-feature img {
     padding-bottom: 30px;
     margin-bottom: 10px;
     position: relative;
+
+    .data {
+      h3 {
+        width: 70%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .post-meta {
+        width: 30%;
+      }
+    }
 
 
     img {
@@ -75,4 +92,29 @@ body .post-feature img {
     display: block;
 
   }
+}
+
+@media screen and (max-width: 600px) {
+    .post-list {
+        grid-template-columns: 1fr;
+        li {
+            grid-column: span 1;
+
+            &.small {
+                img {
+                    height: 240px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .post-list {
+        li {
+            img {
+                height: 120px !important;
+            }
+        }
+    }
 }

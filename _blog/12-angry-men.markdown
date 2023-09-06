@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "12 Angry Men"
-date:   06/01/2023
+date:   01/06/2023
 categories: movies
 permalink: /blog/12-angry-men/
 imdb: tt0050083

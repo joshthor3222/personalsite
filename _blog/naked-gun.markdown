@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Naked Gun"
-date:   09/04/2023
+date:   03/09/2023
 categories: movies
 permalink: /blog/naked-gun/
 imdb: tt0095705
